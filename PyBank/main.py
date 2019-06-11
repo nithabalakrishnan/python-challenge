@@ -10,7 +10,7 @@ def readingBudgetData():
     with open(PyBankBudgetcsvPath, mode='r') as csvfile:
         pyBankBudgetReader = csv.reader(csvfile, delimiter=",")
         next(pyBankBudgetReader) # Skip header
-        
+
         # variable declarations
         totalProfitOrLoss = 0.0
         changeArray = []
@@ -64,7 +64,7 @@ def readingBudgetData():
         f.write("Greatest Decrease in Profits: " + str(minProfitDataSet['period']) + " " + str(minProfitDataSet['value']) + "\n")
         f.close()    
         
-        #Consloe Prit
+        #Console Print
         print("Financial Analysis")
         print("----------------------------")
         print("Total Months: {0:d}".format(numberOfMonths))
